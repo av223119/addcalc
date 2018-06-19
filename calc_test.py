@@ -11,3 +11,6 @@ class CalcTest(unittest.TestCase):
 
     def test_two(self):
         self.assertEqual(calc.add("2,3"), 5)
+
+    def test_ten(self):
+        self.assertEqual(calc.add("4,5,6,7,8,9,0,11,915,45"), 1010)
