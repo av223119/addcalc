@@ -11,3 +11,8 @@
    >> add("1,2,3")
    Assuming ValueError. Since it is not given in the specification, I don't
    provide any testcases for this behavior
+
+=== Task 3
+
+2. specification 3.2 says "there's no need to prove this", but to be sure I've
+   added a testcase for incorrect input example
