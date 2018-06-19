@@ -38,3 +38,9 @@ class CalcTest(unittest.TestCase):
     def test_negative_delimiter(self):
         with self.assertRaisesRegex(ValueError, "negatives not allowed: -1,-3"):
             calc.add("//[:]\n3:-1:2:-3")
+
+    def test_morethan1000(self):
+        self.assertEqual(calc.add("//[+]\n2+1001"), 2)
+
+    def test_exactly1000(self):
+        self.assertEqual(calc.add("999,1000"), 1999)
