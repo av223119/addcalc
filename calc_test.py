@@ -47,3 +47,9 @@ class CalcTest(unittest.TestCase):
 
     def test_longdelimiter(self):
         self.assertEqual(calc.add("//[***]\n3***3***4"), 10)
+
+    def test_differentdel(self):
+        self.assertEqual(calc.add("//[*][%]\n1*2%3"), 6)
+
+    def test_differentlongdel(self):
+        self.assertEqual(calc.add("//[ cat ][ legs ]\n1 cat 4 legs 0"), 5)

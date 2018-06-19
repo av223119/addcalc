@@ -1,11 +1,12 @@
 import re
 
 def add(numbers):
-    del_spec = re.fullmatch(r"//\[(.+)\]\n(.*)", numbers)
+    del_spec = re.fullmatch(r"//(\[.+\])+\n(.*)", numbers)
     sep = r"[,\n]"
     if del_spec:
         numbers = del_spec.group(2)
-        sep = re.escape(del_spec.group(1))
+        sep = "|".join(map(lambda x: re.escape(x), re.findall(r"\[(.*?)\]", del_spec.group(1))))
+        print (sep)
     if numbers == "":
         return 0
     lst = [ int(x) for x in re.split(sep, numbers) if int(x) <= 1000 ]
