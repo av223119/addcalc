@@ -24,3 +24,7 @@
 
 4. specification 3.3 is unclear. Should the given delimiter replace comma only
    or both comma and newline? Assuming the second.
+
+=== Task 8
+
+5. no code added, because the code from the previous commit passes the test
