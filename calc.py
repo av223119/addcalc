@@ -8,5 +8,8 @@ def add(numbers):
         sep = del_spec.group(1)
     if numbers == "":
         return 0
-    lst = re.split(sep, numbers)
-    return sum(map(lambda x: int(x), lst))
+    lst = [ int(x) for x in re.split(sep, numbers) ]
+    negatives = [ str(x) for x in lst if x < 0 ]
+    if negatives:
+        raise ValueError("negatives not allowed: {0}".format(",".join(negatives))) 
+    return sum(lst)

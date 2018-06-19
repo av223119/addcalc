@@ -30,3 +30,11 @@ class CalcTest(unittest.TestCase):
 
     def test_delspec_empty(self):
         self.assertEqual(calc.add("//[x]\n"), 0)
+
+    def test_negative(self):
+        with self.assertRaisesRegex(ValueError, "negatives not allowed: -1"):
+            calc.add("0,-1")
+
+    def test_negative_delimiter(self):
+        with self.assertRaisesRegex(ValueError, "negatives not allowed: -1,-3"):
+            calc.add("//[:]\n3:-1:2:-3")
