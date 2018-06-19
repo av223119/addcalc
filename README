@@ -16,3 +16,11 @@
 
 2. specification 3.2 says "there's no need to prove this", but to be sure I've
    added a testcase for incorrect input example
+
+3. there's a contradiction in the specification 3.1: it says that newlines
+   should be accepted __INSTEAD__ of commas, but at the same time it states
+   that the input "1\n2,3" is OK. I am assuming that the newlines are
+   acceptable __IN ADDITION TO__ commas
+
+4. specification 3.3 is unclear. Should the given delimiter replace comma only
+   or both comma and newline? Assuming the second.

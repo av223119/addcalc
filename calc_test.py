@@ -24,3 +24,9 @@ class CalcTest(unittest.TestCase):
     def test_doubledelimiter(self):
         with self.assertRaises(ValueError):
             calc.add("1\n,2")
+
+    def test_delspec(self):
+        self.assertEqual(calc.add("//[;]\n4;74;134"), 212)
+
+    def test_delspec_empty(self):
+        self.assertEqual(calc.add("//[x]\n"), 0)
