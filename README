@@ -1,0 +1,13 @@
+0. It is not specified how the function should behave when invalid input is
+   provided
+   >> add("X")
+   Assuming ValueError. Since it is not given in the specification, I don't
+   provide any testcases for this behavior
+
+=== Task 1
+
+1. It is specified that the function should accept 0 to 2 numbers, but it is
+   not specified how should it bevahe if more numbers provided
+   >> add("1,2,3")
+   Assuming ValueError. Since it is not given in the specification, I don't
+   provide any testcases for this behavior
