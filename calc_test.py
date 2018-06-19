@@ -44,3 +44,6 @@ class CalcTest(unittest.TestCase):
 
     def test_exactly1000(self):
         self.assertEqual(calc.add("999,1000"), 1999)
+
+    def test_longdelimiter(self):
+        self.assertEqual(calc.add("//[***]\n3***3***4"), 10)

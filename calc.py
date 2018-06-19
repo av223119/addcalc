@@ -1,7 +1,7 @@
 import re
 
 def add(numbers):
-    del_spec = re.fullmatch(r"//\[(.)\]\n(.*)", numbers)
+    del_spec = re.fullmatch(r"//\[(.+)\]\n(.*)", numbers)
     sep = r"[,\n]"
     if del_spec:
         numbers = del_spec.group(2)
